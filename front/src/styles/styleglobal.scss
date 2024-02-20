@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&family=Oswald:wght@400;600&display=swap");
+$background-color: #f8f8f8;
+
+html {
+  height: 100%;
+  position: relative;
+
+  body {
+    margin: 0;
+    background-color: $background-color;
+    min-height: 100vh;
+    div#root {
+      padding: 0 3vh;
+      margin: 2.5em auto 1em;
+
+      h1 {
+        font-family: "Oswald";
+        font-size: 2.5em;
+        margin: 0 auto 1em;
+        text-decoration: underline;
+        text-underline-offset: 0.8rem;
+        color: #002e5e;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Oswald";
+        font-size: 1.8em;
+        font-weight: 800;
+        margin: 0 auto 1em;
+        color: #0398a6;
+        text-align: center;
+      }
+
+      p,
+      input,
+      button,
+      a {
+        font-family: "Open Sans";
+        font-size: 0.9em;
+        color: #002e5e;
+      }
+
+      input:hover {
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+      }
+      .button_disabled {
+        color: grey;
+        cursor: not-allowed;
+      }
+      .footer {
+        bottom: 0;
+        position: sticky;
+        background-color: $background-color;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div.row {
+        content: "";
+        display: block;
+        border-top: 0.1rem solid #0398a6;
+      }
+      div.alltodo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        p.error-message {
+          color: red;
+        }
+        svg {
+          width: 22px;
+          color: #002e5e;
+        }
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          height: 22px;
+          width: fit-content;
+        }
+        button:hover {
+          cursor: pointer;
+        }
+
+        div.task_completed.mytodolist {
+          background-color: #002e5e;
+          p,
+          svg {
+            color: #ffffff;
+          }
+        }
+        div.mytodolist,
+        div.createToDo,
+        div.deleteAllTasks {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #ffffff;
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          padding: 1rem;
+          border-radius: 0.3em;
+          margin: 0 0 1em;
+          a {
+            font-size: 1em;
+            font-weight: 600;
+          }
+          div.editNameandDeleteToDo {
+            display: flex;
+            height: 22px;
+            div.editName {
+              button {
+                margin: 0 0.5em 0 2em;
+              }
+            }
+            div.deleteTodoList {
+              button {
+                margin: 0 0 0 0.5em;
+              }
+            }
+          }
+          label {
+            display: flex;
+            input {
+              margin: 0 0.5em 0 0;
+            }
+            p {
+              font-size: 1em;
+              font-weight: 600;
+              margin: 0;
+            }
+          }
+        }
+        div.row {
+          margin: 1.5em 0 0;
+        }
+        div.createToDo {
+          margin: 2em 0 1em;
+          input {
+            text-overflow: ellipsis;
+          }
+          .button_disabled {
+            color: grey;
+          }
+        }
+        div.deleteAllTasks {
+          margin: 2em 0 1em;
+          button {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div#root {
+      max-width: 1200px;
+      width: 100%;
+    }
+  }
+}

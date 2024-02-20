@@ -1,0 +1,17 @@
+{
+  "name": "serveur",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "axel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.9.1",
+    "sequelize": "^6.36.0"
+  },
+  "description": ""
+}
